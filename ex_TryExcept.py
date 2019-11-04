@@ -21,7 +21,7 @@ else:
 
 """
 O objetivo no 1º Script é mostrar algum erro no código, no entanto o uso das palavras reservada "try e except" ira tratar o erro
-para que o script continue a ser executado. O erro no código é na mensagem "printt", linha 13 que pertence a lista de "frutas_madura", 
+para que o script continue a ser executado. O erro no código esta na saída "printt", linha 13 que pertence a lista de "frutas_madura", 
 pois print não tem duas letras 't', isso traria um erro dentro do script não deixando ser executado.
 """
 #===================================================================================================#
