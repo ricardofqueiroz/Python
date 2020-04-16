@@ -1,5 +1,5 @@
 
-#Criando o menu de opções
+#Menu de opções
 print("""
 [1] - NomeCompleto
 [2] - multiplicacao
