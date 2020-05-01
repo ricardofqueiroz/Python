@@ -11,7 +11,8 @@ print("""
 #Criando um contador para a estrutura de repetição while caso o usuário escolha opção não existente
 contar=0
 #=========================================================#
-#Criando as funções
+#Funções
+
 #1º Função
 def DadosPessoa():
 
