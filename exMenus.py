@@ -1,7 +1,7 @@
 
 #Menu de opções
 print("""
-[1] - NomeCompleto
+[1] - DadosPessoa
 [2] - multiplicacao
 [3] - cestaFrutas
 [4] - HoraAtual
@@ -13,9 +13,18 @@ contar=0
 #=========================================================#
 #Criando as funções
 #1º Função
-def NomeCompleto():
-	SeuNome = input("Digite seu nome: ")
-	print(SeuNome)
+def DadosPessoa():
+
+#	SeuNome = input("Digite seu nome: ")
+#	print('Nome da pessoa é', SeuNome)
+#	idade=int(input("Digite sua idade: "))
+#	print(SeuNome, 'tem', idade, 'anos.', 'Nasceu no ano de', 2020 - idade)
+
+#Exemplo com formatação	
+    SeuNome=input("Digite seu nome: ")
+    print(f'Nome da pessoa é {SeuNome}')
+    idade=int(input("Digite sua idade: "))
+    print(f'{SeuNome} tem {idade} anos. Nasceu no ano de {2020 - idade}.')
 
 #2º Função
 def multiplicacao():
@@ -43,7 +52,7 @@ while opcao != 1 and opcao != 2 and opcao != 3 and opcao != 4 and opcao != 5:
 	opcao=int(input("Não existe. Escolha outra: "))
 	contar=contar+1
 if opcao == 1:
-	NomeCompleto()
+	DadosPessoa()
 elif opcao == 2:
 	multiplicacao()
 elif opcao == 3:
