@@ -2,7 +2,7 @@
 #Menu de opções
 print("""
 [1] - DadosPessoa
-[2] - multiplicacao
+[2] - Calculos
 [3] - cestaFrutas
 [4] - HoraAtual
 [5] - sair
@@ -28,11 +28,12 @@ def DadosPessoa():
     print(f'{SeuNome} tem {idade} anos. Nasceu no ano de {2020 - idade}.')
 
 #2º Função
-def multiplicacao():
-	n1=int(input(": "))
-	n2=int(input(": "))
-	multiplicar=n1*n2
-	print(multiplicar)
+def Calculos():
+    print("Calculando uma multiplicação")
+    n1=int(input(": "))
+    n2=int(input(": "))
+    multiplicar=n1*n2
+    print("O resultado da multiplicação é:", multiplicar)
 
 #3º Função
 def cestaFrutas(frutas):
@@ -55,7 +56,7 @@ while opcao != 1 and opcao != 2 and opcao != 3 and opcao != 4 and opcao != 5:
 if opcao == 1:
 	DadosPessoa()
 elif opcao == 2:
-	multiplicacao()
+	Calculos()
 elif opcao == 3:
     for i in range(0,4):
     	cesta.append(input(":"))
