@@ -31,10 +31,13 @@ def DadosPessoa():
 def Calculos():
     print("Calculando uma multiplicação")
     n1=int(input(": "))
-    n2=int(input(": "))
+    n2=int(input(": "))  
     multiplicar=n1*n2
-    print("O resultado da multiplicação é:", multiplicar)
-
+    print("O resultado da multiplicação é:", multiplicar, "e seu tipo de dado é", type(multiplicar))
+    """
+    No tipo de dado 'type(multiplicar)' que mostra qual o tipo de dado da multiplicação também poderia 
+    ser 'print(type(multiplicar))'  
+    """
 #3º Função
 def cestaFrutas(frutas):
 	return frutas
@@ -51,22 +54,30 @@ def HoraAtual():
 #Escolhendo as opções para chamar as funções
 opcao=int(input("Escolha uma opção: "))
 while opcao != 1 and opcao != 2 and opcao != 3 and opcao != 4 and opcao != 5:
-	opcao=int(input("Não existe. Escolha outra: "))
+	opcao=int(input("Esta opção não existe. Escolha outra: "))
 	contar=contar+1
 if opcao == 1:
 	DadosPessoa()
 elif opcao == 2:
 	Calculos()
 elif opcao == 3:
-    for i in range(0,4):
-    	cesta.append(input(":"))
-    	print(cesta)
+#O loop while ira permitir que preencha a cesta com até 5 frutas  
+  contar=0
+  while len(cesta)<5: #'len' irá retornar o comprimento da lista cesta, ou seja o nº de frutas na cesta
+    fruta=input("Digite uma fruta:") 
+    contar=contar+1
+#Condição que irá identificar se ha fruta repetida na cesta    
+    if fruta in cesta:
+      print("Essa fruta ja foi colocada na cesta, digite outra")
+    else:
+#Continuando preencher a cesta com o uso da função 'append' que irá sempre adicionar uma fruta na cesta      
+      cesta.append(fruta)
+      print(cesta)
+#Condição que informa se a lista 'cesta' foi preenhida com a função 'len' que retorna o comprimeto da lista cesta      
+      if len(cesta)==5:
+        print("A cesta de frutas esta cheia")
 elif opcao == 4:
-	HoraAtual()
+    HoraAtual()
 elif opcao == 5:
-	print("Sair do programa")
-else:
-	print("Essa Opção não existe. Escolha outra")
-	opcao=int(input("Escolha: "))
-	contar=contar+1
-	
+    print("Sair do programa")
+
